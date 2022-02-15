@@ -80,6 +80,241 @@
         "com.unity.modules.imgui": "1.0.0"
       }
     },
+    "org.nuget.microsoft.aspnetcore.connections.abstractions": {
+      "version": "2.1.0",
+      "depth": 3,
+      "source": "registry",
+      "dependencies": {
+        "org.nuget.microsoft.aspnetcore.http.features": "2.1.0",
+        "org.nuget.system.io.pipelines": "4.5.0"
+      },
+      "url": "https://unitynuget-registry.azurewebsites.net"
+    },
+    "org.nuget.microsoft.aspnetcore.http.connections.client": {
+      "version": "1.0.0",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "org.nuget.microsoft.aspnetcore.http.connections.common": "1.0.0",
+        "org.nuget.microsoft.extensions.logging.abstractions": "2.1.0"
+      },
+      "url": "https://unitynuget-registry.azurewebsites.net"
+    },
+    "org.nuget.microsoft.aspnetcore.http.connections.common": {
+      "version": "1.0.0",
+      "depth": 2,
+      "source": "registry",
+      "dependencies": {
+        "org.nuget.microsoft.aspnetcore.connections.abstractions": "2.1.0",
+        "org.nuget.newtonsoft.json": "11.0.2",
+        "org.nuget.system.buffers": "4.5.0"
+      },
+      "url": "https://unitynuget-registry.azurewebsites.net"
+    },
+    "org.nuget.microsoft.aspnetcore.http.features": {
+      "version": "2.1.0",
+      "depth": 4,
+      "source": "registry",
+      "dependencies": {
+        "org.nuget.microsoft.extensions.primitives": "2.1.0"
+      },
+      "url": "https://unitynuget-registry.azurewebsites.net"
+    },
+    "org.nuget.microsoft.aspnetcore.signalr.client": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "org.nuget.microsoft.aspnetcore.http.connections.client": "1.0.0",
+        "org.nuget.microsoft.aspnetcore.signalr.client.core": "1.0.0"
+      },
+      "url": "https://unitynuget-registry.azurewebsites.net"
+    },
+    "org.nuget.microsoft.aspnetcore.signalr.client.core": {
+      "version": "1.0.0",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "org.nuget.microsoft.aspnetcore.signalr.common": "1.0.0",
+        "org.nuget.microsoft.aspnetcore.signalr.protocols.json": "1.0.0",
+        "org.nuget.microsoft.extensions.dependencyinjection": "2.1.0",
+        "org.nuget.microsoft.extensions.logging": "2.1.0",
+        "org.nuget.system.threading.channels": "4.5.0"
+      },
+      "url": "https://unitynuget-registry.azurewebsites.net"
+    },
+    "org.nuget.microsoft.aspnetcore.signalr.common": {
+      "version": "1.0.0",
+      "depth": 2,
+      "source": "registry",
+      "dependencies": {
+        "org.nuget.microsoft.aspnetcore.connections.abstractions": "2.1.0",
+        "org.nuget.microsoft.extensions.options": "2.1.0",
+        "org.nuget.newtonsoft.json": "11.0.2",
+        "org.nuget.system.buffers": "4.5.0"
+      },
+      "url": "https://unitynuget-registry.azurewebsites.net"
+    },
+    "org.nuget.microsoft.aspnetcore.signalr.protocols.json": {
+      "version": "1.0.0",
+      "depth": 2,
+      "source": "registry",
+      "dependencies": {
+        "org.nuget.microsoft.aspnetcore.signalr.common": "1.0.0",
+        "org.nuget.newtonsoft.json": "11.0.2"
+      },
+      "url": "https://unitynuget-registry.azurewebsites.net"
+    },
+    "org.nuget.microsoft.extensions.configuration": {
+      "version": "2.1.0",
+      "depth": 4,
+      "source": "registry",
+      "dependencies": {
+        "org.nuget.microsoft.extensions.configuration.abstractions": "2.1.0"
+      },
+      "url": "https://unitynuget-registry.azurewebsites.net"
+    },
+    "org.nuget.microsoft.extensions.configuration.abstractions": {
+      "version": "2.1.0",
+      "depth": 5,
+      "source": "registry",
+      "dependencies": {
+        "org.nuget.microsoft.extensions.primitives": "2.1.0"
+      },
+      "url": "https://unitynuget-registry.azurewebsites.net"
+    },
+    "org.nuget.microsoft.extensions.configuration.binder": {
+      "version": "2.1.0",
+      "depth": 3,
+      "source": "registry",
+      "dependencies": {
+        "org.nuget.microsoft.extensions.configuration": "2.1.0"
+      },
+      "url": "https://unitynuget-registry.azurewebsites.net"
+    },
+    "org.nuget.microsoft.extensions.dependencyinjection": {
+      "version": "2.1.0",
+      "depth": 2,
+      "source": "registry",
+      "dependencies": {
+        "org.nuget.microsoft.extensions.dependencyinjection.abstractions": "2.1.0"
+      },
+      "url": "https://unitynuget-registry.azurewebsites.net"
+    },
+    "org.nuget.microsoft.extensions.dependencyinjection.abstractions": {
+      "version": "2.1.0",
+      "depth": 3,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://unitynuget-registry.azurewebsites.net"
+    },
+    "org.nuget.microsoft.extensions.logging": {
+      "version": "2.1.0",
+      "depth": 2,
+      "source": "registry",
+      "dependencies": {
+        "org.nuget.microsoft.extensions.logging.abstractions": "2.1.0",
+        "org.nuget.microsoft.extensions.configuration.binder": "2.1.0",
+        "org.nuget.microsoft.extensions.dependencyinjection.abstractions": "2.1.0",
+        "org.nuget.microsoft.extensions.options": "2.1.0"
+      },
+      "url": "https://unitynuget-registry.azurewebsites.net"
+    },
+    "org.nuget.microsoft.extensions.logging.abstractions": {
+      "version": "2.1.0",
+      "depth": 2,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://unitynuget-registry.azurewebsites.net"
+    },
+    "org.nuget.microsoft.extensions.options": {
+      "version": "2.1.0",
+      "depth": 3,
+      "source": "registry",
+      "dependencies": {
+        "org.nuget.microsoft.extensions.dependencyinjection.abstractions": "2.1.0",
+        "org.nuget.microsoft.extensions.primitives": "2.1.0"
+      },
+      "url": "https://unitynuget-registry.azurewebsites.net"
+    },
+    "org.nuget.microsoft.extensions.primitives": {
+      "version": "2.1.0",
+      "depth": 4,
+      "source": "registry",
+      "dependencies": {
+        "org.nuget.system.memory": "4.5.0",
+        "org.nuget.system.runtime.compilerservices.unsafe": "4.5.0"
+      },
+      "url": "https://unitynuget-registry.azurewebsites.net"
+    },
+    "org.nuget.newtonsoft.json": {
+      "version": "11.0.2",
+      "depth": 3,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://unitynuget-registry.azurewebsites.net"
+    },
+    "org.nuget.system.buffers": {
+      "version": "4.5.0",
+      "depth": 3,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://unitynuget-registry.azurewebsites.net"
+    },
+    "org.nuget.system.io.pipelines": {
+      "version": "4.5.0",
+      "depth": 4,
+      "source": "registry",
+      "dependencies": {
+        "org.nuget.system.buffers": "4.4.0",
+        "org.nuget.system.memory": "4.5.0",
+        "org.nuget.system.threading.tasks.extensions": "4.5.0"
+      },
+      "url": "https://unitynuget-registry.azurewebsites.net"
+    },
+    "org.nuget.system.memory": {
+      "version": "4.5.0",
+      "depth": 5,
+      "source": "registry",
+      "dependencies": {
+        "org.nuget.system.buffers": "4.4.0",
+        "org.nuget.system.numerics.vectors": "4.4.0",
+        "org.nuget.system.runtime.compilerservices.unsafe": "4.5.0"
+      },
+      "url": "https://unitynuget-registry.azurewebsites.net"
+    },
+    "org.nuget.system.numerics.vectors": {
+      "version": "4.4.0",
+      "depth": 6,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://unitynuget-registry.azurewebsites.net"
+    },
+    "org.nuget.system.runtime.compilerservices.unsafe": {
+      "version": "4.5.0",
+      "depth": 4,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://unitynuget-registry.azurewebsites.net"
+    },
+    "org.nuget.system.threading.channels": {
+      "version": "4.5.0",
+      "depth": 2,
+      "source": "registry",
+      "dependencies": {
+        "org.nuget.system.threading.tasks.extensions": "4.5.0"
+      },
+      "url": "https://unitynuget-registry.azurewebsites.net"
+    },
+    "org.nuget.system.threading.tasks.extensions": {
+      "version": "4.5.0",
+      "depth": 3,
+      "source": "registry",
+      "dependencies": {
+        "org.nuget.system.runtime.compilerservices.unsafe": "4.5.0"
+      },
+      "url": "https://unitynuget-registry.azurewebsites.net"
+    },
     "com.unity.modules.ai": {
       "version": "1.0.0",
       "depth": 0,
