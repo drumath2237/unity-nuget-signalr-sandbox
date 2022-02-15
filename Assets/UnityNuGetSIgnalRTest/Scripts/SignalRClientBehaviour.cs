@@ -6,7 +6,8 @@ namespace UnityNuGetSignalRTest
 {
     public class SignalRClientBehaviour : MonoBehaviour
     {
-        [SerializeField] private SignalRInfo signalRInfo;
+        [SerializeField]
+        private SignalRInfo signalRInfo;
 
         private HubConnection _connection;
 
