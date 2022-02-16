@@ -1,6 +1,8 @@
 ﻿using System;
 using Microsoft.AspNetCore.SignalR.Client;
+using TMPro;
 using UnityEngine;
+using UnityEngine.Networking;
 
 namespace UnityNuGetSignalRTest
 {
@@ -8,6 +10,10 @@ namespace UnityNuGetSignalRTest
     {
         [SerializeField]
         private SignalRInfo signalRInfo;
+
+        [SerializeField]
+        private TextMeshProUGUI _logText;
+
 
         private HubConnection _connection;
 
@@ -24,7 +30,7 @@ namespace UnityNuGetSignalRTest
 
                 await _connection.StartAsync();
 
-                _connection.On("event", (string msg) => { Debug.Log($"event message: {msg}"); });
+                _connection.On<string>("event", OnSignalRMessageReceive);
             }
             catch (Exception e)
             {
@@ -35,14 +41,24 @@ namespace UnityNuGetSignalRTest
             Debug.Log("connected!");
         }
 
-        public async void SendSignalREventMessage()
+        private void OnSignalRMessageReceive(string msg)
+        {
+            Debug.Log(msg);
+
+            if (_logText != null)
+            {
+                _logText.text = $"{DateTime.Now:HH:mm:ss}: {msg}\n{_logText.text}";
+            }
+        }
+
+        public void SendSignalREventMessage()
         {
             if (_connection == null)
             {
                 return;
             }
 
-            await _connection.SendAsync("event", "helloooo");
+            UnityWebRequest.Get($"{signalRInfo.apiBaseUrl}/send").SendWebRequest();
         }
 
         private async void OnApplicationQuit()
