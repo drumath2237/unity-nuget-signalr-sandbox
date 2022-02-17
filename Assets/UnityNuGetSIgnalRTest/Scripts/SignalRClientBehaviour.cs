@@ -12,14 +12,14 @@ namespace UnityNuGetSignalRTest
         private SignalRInfo signalRInfo;
 
         [SerializeField]
-        private TextMeshProUGUI _logText;
+        private TextMeshProUGUI logText;
 
         private string _logString = "";
 
 
         private HubConnection _connection;
 
-        private async void Start()
+        private async void Awake()
         {
             if (signalRInfo == null || signalRInfo.apiBaseUrl == "")
             {
@@ -43,16 +43,19 @@ namespace UnityNuGetSignalRTest
             Debug.Log("connected!");
         }
 
-        void Update()
+        private void Update()
         {
-            _logText.text = _logString;
+            if (logText != null)
+            {
+                logText.text = _logString;
+            }
         }
 
         private void OnSignalRMessageReceive(string msg)
         {
             Debug.Log(msg);
 
-            _logString = $"{DateTime.Now:HH:mm:ss}: {msg}\n{_logText.text}";
+            _logString = $"{DateTime.Now:HH:mm:ss}: {msg}\n{logText.text}";
         }
 
         public void SendSignalREventMessage()
