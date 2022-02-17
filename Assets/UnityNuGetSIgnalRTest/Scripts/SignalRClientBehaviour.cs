@@ -14,6 +14,8 @@ namespace UnityNuGetSignalRTest
         [SerializeField]
         private TextMeshProUGUI _logText;
 
+        private string _logString = "";
+
 
         private HubConnection _connection;
 
@@ -41,14 +43,16 @@ namespace UnityNuGetSignalRTest
             Debug.Log("connected!");
         }
 
+        void Update()
+        {
+            _logText.text = _logString;
+        }
+
         private void OnSignalRMessageReceive(string msg)
         {
             Debug.Log(msg);
 
-            if (_logText != null)
-            {
-                _logText.text = $"{DateTime.Now:HH:mm:ss}: {msg}\n{_logText.text}";
-            }
+            _logString = $"{DateTime.Now:HH:mm:ss}: {msg}\n{_logText.text}";
         }
 
         public void SendSignalREventMessage()
